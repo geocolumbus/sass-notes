@@ -1,0 +1,28 @@
+$color-primary: #6F686D;
+$color-secondary: #B3B492;
+$color-alpha: #CBB8A9;
+$color-beta: #D8D0C1;
+$color-gamma: #E0D3DE;
+
+@mixin link_behavior() {
+  &:hover {
+    text-decoraton: none
+  }
+  background-color: red;
+}
+
+%make_it_blue {
+  color: aqua;
+  background-color: darkorange;
+}
+
+.george {
+  @extend %make_it_blue
+}
+
+nav {
+  @include link_behavior;
+  div a .george {
+  }
+}
+
